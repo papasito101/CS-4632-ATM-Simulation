@@ -1,9 +1,9 @@
-# Byte-compiled / optimized / DLL files
+# Byte-compiled
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Distribution / packaging
+# Distribution
 build/
 dist/
 *.egg-info/
@@ -12,7 +12,3 @@ dist/
 .venv/
 venv/
 env/
-
-# IDE
-.vscode/
-.idea/
