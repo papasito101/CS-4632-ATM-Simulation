@@ -1,56 +1,51 @@
-# CS-4632 ATM Simulation (Day 1–2 Starter)
+# CS-4632 ATM Simulation
 
-This repository contains a minimal **Day 1–2** starter for your Modeling & Simulation project.
+**Day 3–4 milestone implemented**: ATM service + queue + balking. Python **3.6** compatible.
 
-## What’s implemented so far
-- Project structure with `src/` modules
-- A basic **SimulationEngine** with an **event queue**
-- **Poisson arrivals** (exponential inter-arrival times)
-- A simple FIFO **QueueSystem** to hold arriving customers
-- Console logging for arrivals + queue length snapshots
+## Features
+- Poisson **arrivals** (exponential inter-arrival times; hours as base unit)
+- Multiple **ATMs** (c servers), FIFO queue
+- **Lognormal service times** (configured by mean minutes + CV)
+- **Balking** when queue length ≥ max allowed
+- Metrics: arrivals, balked, started, completed, average wait, p95 wait, average queue length, per-ATM utilization
+- Console logging of ARRIVAL / START / DONE / BALK
 
-> This satisfies the first milestone step of *“Set up repo + basic SimulationEngine + Poisson arrivals.”*
-
-## Python Version
-- Tested to be compatible with **Python 3.6** (no external dependencies).
-
-## How to run
+## Run
 ```bash
-python src/simulation_engine.py --rate 15 --duration 2.0 --seed 42
+python src/simulation_engine.py --rate 18 --duration 2.0 --atms 2 --service-mean-min 3.0 --service-cv 0.6 --max-queue 12 --seed 7
 ```
-**Arguments**
-- `--rate` (λ): average arrivals per hour (default 12)
-- `--duration`: simulation time **in hours** (default 1.0)
-- `--seed`: RNG seed for reproducibility (optional)
+Arguments:
+- `--rate`: arrivals/hour (λ), default 12.0
+- `--duration`: horizon in **hours**, default 1.0
+- `--atms`: number of ATMs, default 2
+- `--service-mean-min`: mean service time (minutes), default 3.0
+- `--service-cv`: service time coefficient of variation, default 0.6
+- `--max-queue`: max waiting customers before **balk**, default 12
+- `--seed`: RNG seed
 
-## Example output
+## Example (truncated)
 ```
-[00.01h] ARRIVAL c001 -> queue_len=1
-[00.02h] ARRIVAL c002 -> queue_len=2
-[00.03h] ARRIVAL c003 -> queue_len=3
+[00.01h] ARRIVAL c001 -> q=1
+[00.01h] START   ATM1 <- c001 (wait=0.00m, st=2.97m)
+[00.06h] ARRIVAL c002 -> q=1
+[00.07h] START   ATM2 <- c002 (wait=1.10m, st=2.41m)
 ...
-[END] time=1.00h, arrivals=18, avg_queue_len=2.14
+[END] time=2.00h, arrivals=33, balked=3, started=30, completed=29
+      avg_wait=5.42m (p95=18.73m)  avg_q_len=1.61
+      utilization: ATM1=0.42, ATM2=0.39
 ```
 
-## Repository layout
+## Layout
 ```
 /src
-  simulation_engine.py   # event loop, Poisson generator, logging
-  customer.py            # Customer entity
-  queue_system.py        # FIFO queue + sampling helpers
-  atm.py                 # placeholder for later (service logic)
-  metrics.py             # basic counters and queue-length statistics
+  simulation_engine.py
+  customer.py
+  queue_system.py
+  atm.py
+  metrics.py
 /tests
-  (add tests here)
+  .gitkeep
 requirements.txt
 .gitignore
 README.md
-```
-
-## Next steps (Day 3–4)
-- Implement **ATM service** with **lognormal** service times
-- Start customers into service when ATM is free
-- Add **balking** (max queue length) or **reneging** (patience timeout)
-- Track metrics: wait times, service completions, utilization
-- Commit often + move tasks on your Project board
 ```
