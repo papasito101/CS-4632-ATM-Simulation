@@ -15,18 +15,18 @@ pip install -r requirements.txt
 
 ## How To Simulate
 ```bash
-python src/simulation_engine.py --rate 18 --duration 2.0 --atms 2 --service-mean-min 3.0 --service-cv 0.6 --max-queue 12 --seed 7
+python .\simulation_engine.py --rate 12 --duration 1.0 --atms 2 --service-mean-min 3.0 --service-cv 0.6 --max-queue 12 --seed 7
 ```
 Arguments:
-- `--rate`: arrivals/hour (λ), default 12.0
-- `--duration`: horizon in **hours**, default 1.0
-- `--atms`: number of ATMs, default 2
-- `--service-mean-min`: mean service time (minutes), default 3.0
-- `--service-cv`: service time coefficient of variation, default 0.6
-- `--max-queue`: max waiting customers before **balk**, default 12
+- `--rate`: arrival/hour (λ); default value: 12.0
+- `--duration`: horizon in **hours**; default value: 1.0
+- `--atms`: number of ATMs; default value: 2
+- `--service-mean-min`: mean service time (minutes); default value: 3.0
+- `--service-cv`: service time coefficient of variation; default value: 0.6
+- `--max-queue`: max waiting customers before **balk**; default value: 12
 - `--seed`: RNG seed
 
-## Output
+## Expected Output
 ```
 [00.01h] ARRIVAL c001 -> q=1
 [00.01h] START   ATM1 <- c001 (wait=0.00m, st=2.97m)
