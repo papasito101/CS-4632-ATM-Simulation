@@ -1,14 +1,14 @@
 # CS-4632 ATM Simulation
 
-## Features
+## Simulation Features
 - Poisson **arrivals** (exponential inter-arrival times; hours as base unit)
-- Multiple **ATMs** (c servers), FIFO queue
-- **Lognormal service times** (configured by mean minutes + CV)
-- **Balking** when queue length ≥ max allowed
-- Metrics: arrivals, balked, started, completed, average wait, p95 wait, average queue length, per-ATM utilization
-- Console logging of ARRIVAL / START / DONE / BALK
+- Numerous **ATMs** (c servers) and a FIFO queue
+- **Lognormal service** times (mean minutes + CV)
+- **Balking** logic when queue is at maximum capacity
+- Metrics details these elements: arrivals, balked, started, completed, average wait, p95 wait, average queue length, per-ATM utilization
+- Console logging: ARRIVAL; START; DONE; BALK
 
-## How To Install Python
+## How To Install
 ```bash
 pip install -r requirements.txt
 ```
