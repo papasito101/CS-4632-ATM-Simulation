@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ```bash
 python .\simulation_engine.py --rate 12 --duration 1.0 --atms 2 --service-mean-min 3.0 --service-cv 0.6 --max-queue 12 --seed 7
 ```
-Arguments:
+Python arguments:
 - `--rate`: arrival/hour (λ); default value: 12.0
 - `--duration`: horizon in **hours**; default value: 1.0
 - `--atms`: number of ATMs; default value: 2
