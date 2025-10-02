@@ -1,7 +1,5 @@
 # CS-4632 ATM Simulation
 
-**Day 3–4 milestone implemented**: ATM service + queue + balking. Python **3.6** compatible.
-
 ## Features
 - Poisson **arrivals** (exponential inter-arrival times; hours as base unit)
 - Multiple **ATMs** (c servers), FIFO queue
@@ -10,7 +8,12 @@
 - Metrics: arrivals, balked, started, completed, average wait, p95 wait, average queue length, per-ATM utilization
 - Console logging of ARRIVAL / START / DONE / BALK
 
-## Run
+## How To Install Python
+```bash
+pip install -r requirements.txt
+```
+
+## How To Simulate
 ```bash
 python src/simulation_engine.py --rate 18 --duration 2.0 --atms 2 --service-mean-min 3.0 --service-cv 0.6 --max-queue 12 --seed 7
 ```
@@ -23,7 +26,7 @@ Arguments:
 - `--max-queue`: max waiting customers before **balk**, default 12
 - `--seed`: RNG seed
 
-## Example (truncated)
+## Output
 ```
 [00.01h] ARRIVAL c001 -> q=1
 [00.01h] START   ATM1 <- c001 (wait=0.00m, st=2.97m)
@@ -35,17 +38,17 @@ Arguments:
       utilization: ATM1=0.42, ATM2=0.39
 ```
 
-## Layout
+## Repo Structure
 ```
 /src
-  simulation_engine.py
-  customer.py
-  queue_system.py
   atm.py
+  customer.py
   metrics.py
-/tests
+  queue_system.py
+  simulation_engine.py
+/test
   .gitkeep
-requirements.txt
 .gitignore
 README.md
+requirements.txt
 ```
