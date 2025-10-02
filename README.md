@@ -28,14 +28,30 @@ Arguments:
 
 ## Expected Output
 ```
-[00.01h] ARRIVAL c001 -> q=1
-[00.01h] START   ATM1 <- c001 (wait=0.00m, st=2.97m)
-[00.06h] ARRIVAL c002 -> q=1
-[00.07h] START   ATM2 <- c002 (wait=1.10m, st=2.41m)
-...
-[END] time=2.00h, arrivals=33, balked=3, started=30, completed=29
-      avg_wait=5.42m (p95=18.73m)  avg_q_len=1.61
-      utilization: ATM1=0.42, ATM2=0.39
+[0.09h] ARRIVAL c001 -> q=1
+[0.09h] START   ATM1 <- c001 (wait=0.00m, st=0.99m)
+[0.11h] DONE    ATM1 -> c001
+[0.31h] ARRIVAL c002 -> q=1
+[0.31h] START   ATM1 <- c002 (wait=0.00m, st=2.71m)
+[0.36h] DONE    ATM1 -> c002
+[0.55h] ARRIVAL c003 -> q=1
+[0.55h] START   ATM1 <- c003 (wait=0.00m, st=2.59m)
+[0.59h] DONE    ATM1 -> c003
+[0.62h] ARRIVAL c004 -> q=1
+[0.62h] START   ATM1 <- c004 (wait=0.00m, st=1.70m)
+[0.65h] DONE    ATM1 -> c004
+[0.79h] ARRIVAL c005 -> q=1
+[0.79h] START   ATM1 <- c005 (wait=0.00m, st=1.27m)
+[0.80h] ARRIVAL c006 -> q=1
+[0.80h] START   ATM2 <- c006 (wait=0.00m, st=2.91m)
+[0.80h] ARRIVAL c007 -> q=1
+[0.81h] DONE    ATM1 -> c005
+[0.81h] START   ATM1 <- c007 (wait=0.88m, st=4.16m)
+[0.85h] DONE    ATM2 -> c006
+[0.88h] DONE    ATM1 -> c007
+[END] time=1.00h, arrivals=7, balked=0, started=7, completed=7
+      avg_wait=0.13m (p95=0.00m)  avg_q_len=0.01
+      utilization: ATM1=0.22, ATM2=0.05
 ```
 
 ## Repo Structure
