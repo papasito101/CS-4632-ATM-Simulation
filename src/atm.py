@@ -1,5 +1,6 @@
 class ATM(object):
-    """Placeholder for Day 3–4 (service, breakdowns, cash levels)."""
+    __slots__ = ("aid", "is_busy", "busy_time")
     def __init__(self, aid):
         self.aid = aid
         self.is_busy = False
+        self.busy_time = 0.0 
