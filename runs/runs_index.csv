@@ -1,0 +1,13 @@
+run_id,purpose,status,rc,wall_seconds,config_path,run_dir
+001,Baseline,OK,0,0.705,runs\run_001\run_config.json,runs\run_001
+002,Lower arrival,OK,0,0.782,runs\run_002\run_config.json,runs\run_002
+003,Higher arrival,OK,0,1.356,runs\run_003\run_config.json,runs\run_003
+004,Smaller queue,OK,0,1.117,runs\run_004\run_config.json,runs\run_004
+005,Larger queue,OK,0,1.416,runs\run_005\run_config.json,runs\run_005
+006,Infinite-ish queue,OK,0,1.181,runs\run_006\run_config.json,runs\run_006
+007,Fewer ATMs,OK,0,0.986,runs\run_007\run_config.json,runs\run_007
+008,More ATMs,OK,0,1.490,runs\run_008\run_config.json,runs\run_008
+009,Very high load,OK,0,1.230,runs\run_009\run_config.json,runs\run_009
+010,High service variability,OK,0,0.924,runs\run_010\run_config.json,runs\run_010
+011,Reneging sensitivity (placeholder),OK,0,1.044,runs\run_011\run_config.json,runs\run_011
+012,Failures enabled (placeholder),OK,0,1.513,runs\run_012\run_config.json,runs\run_012
