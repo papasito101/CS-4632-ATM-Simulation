@@ -1,0 +1,10 @@
+{
+  "atms": 2,
+  "duration_hours": 4.0,
+  "arrival_rate_per_hour": 12.0,
+  "service_mean_min": 3.5,
+  "service_cv": 0.6,
+  "max_queue": 6,
+  "seed": 104,
+  "timeseries_dt_min": 0.5
+}
