@@ -1,0 +1,21 @@
+atms: 2
+duration_min: 240
+arrival_rate_per_hour: 12.0
+service_mean_min: 3.5
+service_cv: 0.6
+max_queue: 12
+seed: 42
+
+patience:
+  enabled: true
+  dist: "exponential"
+  mean_min: 6.0
+
+failures:
+  enabled: false
+  mtbf_min: 120.0
+  mttr_min: 5.0
+
+timeseries_dt_min: 0.5
+
+output_dir: "runs/run_001"
