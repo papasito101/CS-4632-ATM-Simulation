@@ -1,0 +1,15 @@
+{
+  "arrivals": 32,
+  "balked": 0,
+  "started": 32,
+  "completed": 32,
+  "avg_wait_min": 0.07634865326310358,
+  "p95_wait_min": 0.0,
+  "avg_queue_len": 0.010179820435080478,
+  "utilization": [
+    0.335556084779857,
+    0.14687327497124933
+  ],
+  "duration_hours": 4.0,
+  "n_atms": 2
+}
