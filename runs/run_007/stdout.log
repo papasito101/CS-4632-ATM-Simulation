@@ -1,0 +1,183 @@
+[0.12h] ARRIVAL c001 -> q=1
+[0.12h] START   ATM1 <- c001 (wait=0.00m, st=4.01m)
+[0.18h] DONE    ATM1 -> c001
+[0.21h] ARRIVAL c002 -> q=1
+[0.21h] START   ATM1 <- c002 (wait=0.00m, st=4.14m)
+[0.26h] ARRIVAL c003 -> q=1
+[0.28h] DONE    ATM1 -> c002
+[0.28h] START   ATM1 <- c003 (wait=1.54m, st=5.14m)
+[0.29h] ARRIVAL c004 -> q=1
+[0.37h] DONE    ATM1 -> c003
+[0.37h] START   ATM1 <- c004 (wait=4.96m, st=1.45m)
+[0.38h] ARRIVAL c005 -> q=1
+[0.39h] ARRIVAL c006 -> q=2
+[0.39h] DONE    ATM1 -> c004
+[0.39h] START   ATM1 <- c005 (wait=0.61m, st=1.74m)
+[0.42h] ARRIVAL c007 -> q=2
+[0.42h] DONE    ATM1 -> c005
+[0.42h] START   ATM1 <- c006 (wait=1.95m, st=1.59m)
+[0.45h] DONE    ATM1 -> c006
+[0.45h] START   ATM1 <- c007 (wait=1.99m, st=1.91m)
+[0.48h] DONE    ATM1 -> c007
+[0.63h] ARRIVAL c008 -> q=1
+[0.63h] START   ATM1 <- c008 (wait=0.00m, st=1.97m)
+[0.64h] ARRIVAL c009 -> q=1
+[0.66h] DONE    ATM1 -> c008
+[0.66h] START   ATM1 <- c009 (wait=1.19m, st=3.59m)
+[0.72h] DONE    ATM1 -> c009
+[0.76h] ARRIVAL c010 -> q=1
+[0.76h] START   ATM1 <- c010 (wait=0.00m, st=2.26m)
+[0.78h] ARRIVAL c011 -> q=1
+[0.80h] ARRIVAL c012 -> q=2
+[0.80h] DONE    ATM1 -> c010
+[0.80h] START   ATM1 <- c011 (wait=1.01m, st=2.34m)
+[0.82h] ARRIVAL c013 -> q=2
+[0.84h] DONE    ATM1 -> c011
+[0.84h] START   ATM1 <- c012 (wait=2.49m, st=4.86m)
+[0.87h] ARRIVAL c014 -> q=2
+[0.88h] ARRIVAL c015 -> q=3
+[0.90h] ARRIVAL c016 -> q=4
+[0.90h] ARRIVAL c017 -> q=5
+[0.92h] DONE    ATM1 -> c012
+[0.92h] START   ATM1 <- c013 (wait=5.80m, st=7.13m)
+[0.93h] ARRIVAL c018 -> q=5
+[0.99h] ARRIVAL c019 -> q=6
+[1.01h] ARRIVAL c020 -> q=7
+[1.02h] ARRIVAL c021 -> q=8
+[1.04h] DONE    ATM1 -> c013
+[1.04h] START   ATM1 <- c014 (wait=10.09m, st=2.36m)
+[1.08h] ARRIVAL c022 -> q=8
+[1.08h] DONE    ATM1 -> c014
+[1.08h] START   ATM1 <- c015 (wait=11.95m, st=3.40m)
+[1.12h] ARRIVAL c023 -> q=8
+[1.14h] DONE    ATM1 -> c015
+[1.14h] START   ATM1 <- c016 (wait=14.22m, st=6.16m)
+[1.20h] ARRIVAL c024 -> q=8
+[1.20h] ARRIVAL c025 -> q=9
+[1.21h] ARRIVAL c026 -> q=10
+[1.24h] DONE    ATM1 -> c016
+[1.24h] START   ATM1 <- c017 (wait=20.26m, st=2.08m)
+[1.27h] DONE    ATM1 -> c017
+[1.27h] START   ATM1 <- c018 (wait=20.36m, st=3.28m)
+[1.33h] DONE    ATM1 -> c018
+[1.33h] START   ATM1 <- c019 (wait=20.15m, st=2.06m)
+[1.36h] DONE    ATM1 -> c019
+[1.36h] START   ATM1 <- c020 (wait=21.08m, st=8.50m)
+[1.50h] DONE    ATM1 -> c020
+[1.50h] START   ATM1 <- c021 (wait=28.92m, st=6.03m)
+[1.56h] ARRIVAL c027 -> q=6
+[1.60h] DONE    ATM1 -> c021
+[1.60h] START   ATM1 <- c022 (wait=31.60m, st=2.41m)
+[1.64h] ARRIVAL c028 -> q=6
+[1.64h] ARRIVAL c029 -> q=7
+[1.64h] DONE    ATM1 -> c022
+[1.64h] START   ATM1 <- c023 (wait=31.56m, st=2.79m)
+[1.67h] ARRIVAL c030 -> q=7
+[1.69h] DONE    ATM1 -> c023
+[1.69h] START   ATM1 <- c024 (wait=29.63m, st=1.36m)
+[1.71h] DONE    ATM1 -> c024
+[1.71h] START   ATM1 <- c025 (wait=30.66m, st=3.08m)
+[1.76h] DONE    ATM1 -> c025
+[1.76h] START   ATM1 <- c026 (wait=33.55m, st=2.32m)
+[1.80h] DONE    ATM1 -> c026
+[1.80h] START   ATM1 <- c027 (wait=14.36m, st=2.38m)
+[1.84h] ARRIVAL c031 -> q=4
+[1.84h] DONE    ATM1 -> c027
+[1.84h] START   ATM1 <- c028 (wait=12.25m, st=1.19m)
+[1.85h] ARRIVAL c032 -> q=4
+[1.86h] DONE    ATM1 -> c028
+[1.86h] START   ATM1 <- c029 (wait=13.34m, st=3.74m)
+[1.93h] DONE    ATM1 -> c029
+[1.93h] START   ATM1 <- c030 (wait=15.09m, st=3.40m)
+[1.98h] DONE    ATM1 -> c030
+[1.98h] START   ATM1 <- c031 (wait=8.35m, st=1.24m)
+[2.00h] DONE    ATM1 -> c031
+[2.00h] START   ATM1 <- c032 (wait=9.47m, st=4.16m)
+[2.07h] DONE    ATM1 -> c032
+[2.08h] ARRIVAL c033 -> q=1
+[2.08h] START   ATM1 <- c033 (wait=0.00m, st=1.48m)
+[2.10h] DONE    ATM1 -> c033
+[2.18h] ARRIVAL c034 -> q=1
+[2.18h] START   ATM1 <- c034 (wait=0.00m, st=1.31m)
+[2.20h] DONE    ATM1 -> c034
+[2.34h] ARRIVAL c035 -> q=1
+[2.34h] START   ATM1 <- c035 (wait=0.00m, st=8.19m)
+[2.46h] ARRIVAL c036 -> q=1
+[2.48h] DONE    ATM1 -> c035
+[2.48h] START   ATM1 <- c036 (wait=1.06m, st=1.58m)
+[2.51h] DONE    ATM1 -> c036
+[2.54h] ARRIVAL c037 -> q=1
+[2.54h] START   ATM1 <- c037 (wait=0.00m, st=5.30m)
+[2.54h] ARRIVAL c038 -> q=1
+[2.58h] ARRIVAL c039 -> q=2
+[2.63h] DONE    ATM1 -> c037
+[2.63h] START   ATM1 <- c038 (wait=5.15m, st=7.08m)
+[2.65h] ARRIVAL c040 -> q=2
+[2.67h] ARRIVAL c041 -> q=3
+[2.74h] DONE    ATM1 -> c038
+[2.74h] START   ATM1 <- c039 (wait=9.85m, st=4.75m)
+[2.75h] ARRIVAL c042 -> q=3
+[2.82h] DONE    ATM1 -> c039
+[2.82h] START   ATM1 <- c040 (wait=10.55m, st=1.98m)
+[2.83h] ARRIVAL c043 -> q=3
+[2.86h] DONE    ATM1 -> c040
+[2.86h] START   ATM1 <- c041 (wait=11.48m, st=3.32m)
+[2.87h] ARRIVAL c044 -> q=3
+[2.89h] ARRIVAL c045 -> q=4
+[2.91h] ARRIVAL c046 -> q=5
+[2.91h] DONE    ATM1 -> c041
+[2.91h] START   ATM1 <- c042 (wait=9.63m, st=1.33m)
+[2.91h] ARRIVAL c047 -> q=5
+[2.93h] DONE    ATM1 -> c042
+[2.93h] START   ATM1 <- c043 (wait=6.32m, st=2.34m)
+[2.97h] DONE    ATM1 -> c043
+[2.97h] START   ATM1 <- c044 (wait=6.24m, st=5.83m)
+[2.98h] ARRIVAL c048 -> q=4
+[3.07h] DONE    ATM1 -> c044
+[3.07h] START   ATM1 <- c045 (wait=11.09m, st=2.21m)
+[3.11h] DONE    ATM1 -> c045
+[3.11h] START   ATM1 <- c046 (wait=11.81m, st=2.87m)
+[3.14h] ARRIVAL c049 -> q=3
+[3.16h] DONE    ATM1 -> c046
+[3.16h] START   ATM1 <- c047 (wait=14.52m, st=1.93m)
+[3.19h] DONE    ATM1 -> c047
+[3.19h] START   ATM1 <- c048 (wait=12.53m, st=3.22m)
+[3.24h] ARRIVAL c050 -> q=2
+[3.24h] DONE    ATM1 -> c048
+[3.24h] START   ATM1 <- c049 (wait=5.92m, st=3.06m)
+[3.29h] DONE    ATM1 -> c049
+[3.29h] START   ATM1 <- c050 (wait=3.40m, st=2.46m)
+[3.31h] ARRIVAL c051 -> q=1
+[3.33h] DONE    ATM1 -> c050
+[3.33h] START   ATM1 <- c051 (wait=1.48m, st=2.56m)
+[3.38h] DONE    ATM1 -> c051
+[3.41h] ARRIVAL c052 -> q=1
+[3.41h] START   ATM1 <- c052 (wait=0.00m, st=2.09m)
+[3.44h] DONE    ATM1 -> c052
+[3.53h] ARRIVAL c053 -> q=1
+[3.53h] START   ATM1 <- c053 (wait=0.00m, st=2.82m)
+[3.57h] DONE    ATM1 -> c053
+[3.58h] ARRIVAL c054 -> q=1
+[3.58h] START   ATM1 <- c054 (wait=0.00m, st=1.84m)
+[3.61h] DONE    ATM1 -> c054
+[3.66h] ARRIVAL c055 -> q=1
+[3.66h] START   ATM1 <- c055 (wait=0.00m, st=1.97m)
+[3.68h] ARRIVAL c056 -> q=1
+[3.69h] DONE    ATM1 -> c055
+[3.69h] START   ATM1 <- c056 (wait=0.73m, st=4.47m)
+[3.75h] ARRIVAL c057 -> q=1
+[3.76h] DONE    ATM1 -> c056
+[3.76h] START   ATM1 <- c057 (wait=1.03m, st=3.91m)
+[3.77h] ARRIVAL c058 -> q=1
+[3.81h] ARRIVAL c059 -> q=2
+[3.83h] DONE    ATM1 -> c057
+[3.83h] START   ATM1 <- c058 (wait=3.23m, st=2.36m)
+[3.84h] ARRIVAL c060 -> q=2
+[3.87h] DONE    ATM1 -> c058
+[3.87h] START   ATM1 <- c059 (wait=3.73m, st=1.12m)
+[3.89h] DONE    ATM1 -> c059
+[3.89h] START   ATM1 <- c060 (wait=2.54m, st=5.59m)
+[3.98h] DONE    ATM1 -> c060
+[END] time=4.00h, arrivals=60, balked=0, started=60, completed=60
+      avg_wait=8.85m (p95=30.66m)  avg_q_len=2.21
+      utilization: ATM1=0.80
