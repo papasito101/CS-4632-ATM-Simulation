@@ -8,63 +8,78 @@
 - Metrics details these elements: arrivals, balked, started, completed, average wait, p95 wait, average queue length, per-ATM utilization
 - Console logging: ARRIVAL; START; DONE; BALK
 
+## Repo Structure
+```
+CS-4632-ATM-Simulation
+  /config
+    /example.yml
+  /experiments
+    /plan.csv
+  /runs
+    /run_XXX
+    /smoke
+    /runs_index.csv
+  /src
+    /__init__.py
+    /atm.py
+    /customer.py
+    /metrics.py
+    /queue_system.py
+    /run_logger.py
+    /simulation_engine.py
+  /test
+    /.gitkeep
+  /tools
+    /run_manager.py
+  /main.py
+  /.gitignore
+  /README.md
+  /requirements
+```
+
 ## How To Install
 ```bash
 pip install -r requirements.txt
 ```
 
 ## How To Simulate
+### Smoke test:
 ```bash
-python .\simulation_engine.py --rate 12 --duration 1.0 --atms 2 --service-mean-min 3.0 --service-cv 0.6 --max-queue 12 --seed 7
-```
-Python arguments:
-- `--rate`: arrival/hour (λ); default value: 12.0
-- `--duration`: horizon in **hours**; default value: 1.0
-- `--atms`: number of ATMs; default value: 2
-- `--service-mean-min`: mean service time (minutes); default value: 3.0
-- `--service-cv`: service time coefficient of variation; default value: 0.6
-- `--max-queue`: max waiting customers before **balk**; default value: 12
-- `--seed`: RNG seed
-
-## Expected Output
-```
-[0.09h] ARRIVAL c001 -> q=1
-[0.09h] START   ATM1 <- c001 (wait=0.00m, st=0.99m)
-[0.11h] DONE    ATM1 -> c001
-[0.31h] ARRIVAL c002 -> q=1
-[0.31h] START   ATM1 <- c002 (wait=0.00m, st=2.71m)
-[0.36h] DONE    ATM1 -> c002
-[0.55h] ARRIVAL c003 -> q=1
-[0.55h] START   ATM1 <- c003 (wait=0.00m, st=2.59m)
-[0.59h] DONE    ATM1 -> c003
-[0.62h] ARRIVAL c004 -> q=1
-[0.62h] START   ATM1 <- c004 (wait=0.00m, st=1.70m)
-[0.65h] DONE    ATM1 -> c004
-[0.79h] ARRIVAL c005 -> q=1
-[0.79h] START   ATM1 <- c005 (wait=0.00m, st=1.27m)
-[0.80h] ARRIVAL c006 -> q=1
-[0.80h] START   ATM2 <- c006 (wait=0.00m, st=2.91m)
-[0.80h] ARRIVAL c007 -> q=1
-[0.81h] DONE    ATM1 -> c005
-[0.81h] START   ATM1 <- c007 (wait=0.88m, st=4.16m)
-[0.85h] DONE    ATM2 -> c006
-[0.88h] DONE    ATM1 -> c007
-[END] time=1.00h, arrivals=7, balked=0, started=7, completed=7
-      avg_wait=0.13m (p95=0.00m)  avg_q_len=0.01
-      utilization: ATM1=0.22, ATM2=0.05
+python main.py --config config/example.yml --output-dir runs/smoke
 ```
 
-## Repo Structure
+Include in ```runs/smoke``` are:
+- ```events.csv```
+- ```timeseries.csv```
+- ```meta.json```
+- ```run_config.json```
+- ```summary.json```
+- ```walltime.txt```
+
+### Batch experiment
+```bash
+python tools\run_manager.py --plan experiments\plan.csv --outdir runs --config-format json --command "{python} main.py --config \"{config_path}\" --output-dir \"{run_dir}\""
 ```
-/src
-  atm.py
-  customer.py
-  metrics.py
-  queue_system.py
-  simulation_engine.py
-/test
-  .gitkeep
-.gitignore
-README.md
-requirements.txt
+
+### Configuration
+```yaml
+atms: 2
+duration_hours: 4
+arrival_rate_per_hour: 12
+service_mean_min: 3.5
+service_cv: 0.6
+max_queue: 12
+seed: 42
+timeseries_dt_min: 0.5
 ```
+
+### Outputs
+Included in each ```runs/run_XXX``` folders are:
+- ```events.csv```
+- ```timeseries.csv```
+- ```meta.json```
+- ```run_config.json```
+- ```summary.json```
+- ```stderr.log```
+- ```stdout.log```
+- ```walltime.txt```
