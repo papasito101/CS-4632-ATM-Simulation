@@ -1,4 +1,25 @@
-# CS-4632 ATM Simulation
+# CS-4632 ATM Simulation  
+### CS 4632 – Modeling & Simulation  
+### Esai Dudoit
+### Kennesaw State University
+### December 4, 2025
+
+---
+
+## Overview
+In this project, a discrete-event simulation model will be used to test out an ATM queue service system.
+Among the elements for this model are:
+- Poisson arrivals
+- Lognormal service times
+- A group of ATMs
+- Queue capacity
+- Customer balking
+- Smoke tests and batch run experimentations
+- Analysis outputs
+
+We will be evaluating waiting times, the lengths of queues, utilizing ATMs, and customer behavior in every operational condition.
+
+---
 
 ## Simulation Features
 - Poisson **arrivals** (exponential inter-arrival times; hours as base unit)
@@ -7,6 +28,11 @@
 - **Balking** logic when queue is at maximum capacity
 - Metrics details these elements: arrivals, balked, started, completed, average wait, p95 wait, average queue length, per-ATM utilization
 - Console logging: ARRIVAL; START; DONE; BALK
+- **Batch experiments** tested with both `run_manager.py` and `plan.csv` 
+- Collections of data: `events.csv`, `timeseries.csv`, `summary.json`, `meta.json`
+- **Different scenarios** for the model: Normal, Lunch-Rush, High-Variability, Cap-Tight, Staff-Added
+
+---
 
 ## Repo Structure
 ```
@@ -37,10 +63,23 @@ CS-4632-ATM-Simulation
   /requirements
 ```
 
-## How To Install
+---
+
+## Installation
+**Python version 3.6** was used in the making of this project.
+
+Clone repository:
+```bash
+git clone https://github.com/papasito101/CS-4632-ATM-Simulation.git
+cd CS-4632-ATM-Simulation
+```
+
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+
+---
 
 ## How To Simulate
 ### Smoke test:
@@ -56,10 +95,14 @@ Include in ```runs/smoke``` are:
 - ```summary.json```
 - ```walltime.txt```
 
+---
+
 ### Batch experiment
 ```bash
 python tools\run_manager.py --plan experiments\plan.csv --outdir runs --config-format json --command "{python} main.py --config \"{config_path}\" --output-dir \"{run_dir}\""
 ```
+
+---
 
 ### Configuration
 ```yaml
@@ -73,6 +116,8 @@ seed: 42
 timeseries_dt_min: 0.5
 ```
 
+---
+
 ### Outputs
 Included in each ```runs/run_XXX``` folders are:
 - ```events.csv```
@@ -83,3 +128,16 @@ Included in each ```runs/run_XXX``` folders are:
 - ```stderr.log```
 - ```stdout.log```
 - ```walltime.txt```
+
+---
+
+### Future
+- Incorporating method of determining reneging behavior
+- A model for ATM reliability
+- A policy for cash inventory (s, S)
+- Visualization with a GUI
+
+---
+
+### License
+This project has been created for educational and instructional purposes for this class of Kennesaw State University. Any other use of this project without permission from the author is prohibited.
